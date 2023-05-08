@@ -1,0 +1,45 @@
+.card p {
+    margin-top: -10px;
+    margin-bottom: 1px;
+}
+.row .card: hover{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    transform: scale(1.02);
+}
+
+.carousel-item {
+    height: 540px; /* Altura del contenedor */
+    overflow: hidden; /* Para ocultar cualquier parte de la imagen que sobresalga */
+ }
+ 
+
+ .navbar-style{
+    background-color: #b8e4ff;
+ }
+
+ .borde-elemento{
+    border-color: #ff85d5;
+ }
+ 
+ .borde-elemento2{
+    border-color: #b2e2f2;
+ }
+
+ .borde-elemento3{
+    border-color: #bf8cdf7e;
+ }
+
+ .body-product-color{
+    background-color: #ffe4e1;
+ }
+
+ .body-product-color2{
+    background-color: #b2e2f2;    
+ }
+
+ .body-product-color3{
+    background-color: #bf8cdf7e;    
+ }
+
+
+ 
