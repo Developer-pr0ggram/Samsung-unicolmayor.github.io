@@ -8,18 +8,23 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+
 
     <title>SAMSUNG</title>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-style navbar-expand-lg navbar-light">
+    <nav class="col-md-12 navbar navbar-style navbar-expand-lg navbar-light">
 
         <a class="navbar-brand" href="#">
             <!-- <img src="" alt="Logo Samsung" width="30" height="30" class="d-inline-block align-top"> -->
@@ -27,11 +32,7 @@
                 <h3><i class="fa fa-cart-plus ml-2 mr-2" aria-hidden="true"></i>Samsung</h3>
             </div>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Inicio</a>
@@ -48,49 +49,49 @@
                     aria-label="Buscar">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="carrito.html">
                 <i class="fa fa-shopping-cart"></i>
             </a>
         </div>
     </nav>
 
 
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ul>
 
-    
-<div class="d-flex col-md-12">
-    <div class="col-md-12 mt-1">
-        <div id="carouselExampleControls" class="carousel slide bg-dark" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active d-flex">
-                    <video class="d-block align-self-center" style="max-height: 800px; max-width: 102%; width: 100%;" autoplay muted loop>
-                        <source src="img/slide/Slide0.mp4" type="video/mp4">
-                      </video>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slide/Slide2.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/slide/Slide3.jpg" class="d-block img-fluid w-100" alt="...">
-                </div>
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="d-block" autoplay muted loop>
+                    <source src="img/slide/Slide0.mp4" type="video/mp4">
+                </video>
             </div>
-
-
-
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item">
+                <img src="img/slide/Slide2.jpg" alt="Producto" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="img/slide/Slide3.jpg" alt="Producto" width="1100" height="500">
+            </div>
         </div>
 
 
-        <h4 class="text-center font-weight-bold m-4">PRODUCTOS NUEVOS</h4>
-
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
-</div>
+
+
+    <h4 class="text-center font-weight-bold m-4">PRODUCTOS NUEVOS</h4>
+
+
 
     <!-- PRODUCTOS---------------------------------------------------------------------- -->
     <div class="row mx-auto col-md-12 d-flex justify-content-center">
@@ -120,7 +121,7 @@
                 <i class="fa fa-star-half-o text-success" aria-hidden="true"></i>
                 <i class="fa fa-star-o text-success" aria-hidden="true"></i><br>
                 <a href="#" class="btn btn-primary" data-target="#produk2" data-toggle="modal">Detalles</a>
-                <a href="#" class="btn btn-danger">$1.199.990</a>
+                <a href="#" class="btn btn-danger">$1.199.900</a>
             </div>
         </div>
 
@@ -293,13 +294,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/Auriculares1.jpeg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/Auriculares1.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Audífonos SAMSUNG Inalámbricos Bluetooth In Ear Galaxy Buds 2 Morado                                   </td>
+                                    <td class="nombre-producto">Audífonos SAMSUNG Inalámbricos Bluetooth In Ear Galaxy Buds 2 Morado </td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -325,20 +326,26 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$449.900</td>
+                                    <td>$<i class="precio-producto">449.900</i></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="mr-4 ml-4">
                             <H4>Resumen del producto</H4>
-                            <p>Sumérgete en tu propio mundo : Experimenta audio con sonido equilibrado, ajuste de comodidad sin igual, cancelación activa de ruido (ANC) y conectividad perfecta a tu teléfono y reloj con los Audífonos Inalámbricos Galaxy Buds 2 Morados. Sonido inmersivo con controles más fáciles y una mejor retroalimentación mientras entrenas, juegas o bailas.
-                                Además tienen un diseño ligero y elegante que te permite llevarlos puestos todo el día de una manera cómoda.</p>
+                            <p>Sumérgete en tu propio mundo : Experimenta audio con sonido equilibrado, ajuste de
+                                comodidad sin igual, cancelación activa de ruido (ANC) y conectividad perfecta a tu
+                                teléfono y reloj con los Audífonos Inalámbricos Galaxy Buds 2 Morados. Sonido inmersivo
+                                con controles más fáciles y una mejor retroalimentación mientras entrenas, juegas o
+                                bailas.
+                                Además tienen un diseño ligero y elegante que te permite llevarlos puestos todo el día
+                                de una manera cómoda.</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <!-- Agregar un id al botón de "COMPRAR" para poder seleccionarlo con JavaScript -->
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -357,13 +364,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/p.webp" alt="">
+                            <img  class="img-producto" src="img/produk/p.webp" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Reloj SAMSUNG Galaxy Watch 5 de 40 mm Gris</td>
+                                    <td class="nombre-producto">Reloj SAMSUNG Galaxy Watch 5 de 40 mm Gris</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -389,19 +396,25 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$1.199.990</td>
+                                    <td>$<i class="precio-producto">1.199.900</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>Con Galaxy Watch 5 de 40 mm Gris encuentras un dispositivo con un diseño moderno, lleno de color y con materiales de alta resistencia, aluminio en su contorno y cristal de zafiro en su display. Los sensores en esta serie vienen con la más alta precisión para monitorear tu estado de salud y romper las metas diarias que quieres alcanzar. Con este Reloj inteligente cuentas con monitor de ritmo cardiaco, sensor de temperatura, nivel de oxígeno en la sangre, composición corporal y todo lo que necesitas para tener un registro completo. ! Adquiéralo aqui!</p>
+                        <p>Con Galaxy Watch 5 de 40 mm Gris encuentras un dispositivo con un diseño moderno, lleno de
+                            color y con materiales de alta resistencia, aluminio en su contorno y cristal de zafiro en
+                            su display. Los sensores en esta serie vienen con la más alta precisión para monitorear tu
+                            estado de salud y romper las metas diarias que quieres alcanzar. Con este Reloj inteligente
+                            cuentas con monitor de ritmo cardiaco, sensor de temperatura, nivel de oxígeno en la sangre,
+                            composición corporal y todo lo que necesitas para tener un registro completo. ! Adquiéralo
+                            aqui!</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary  buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -420,13 +433,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/Frijol.webp" alt="">
+                            <img class="img-producto" src="img/produk/Frijol.webp" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Galaxy Buds Live</td>
+                                    <td class="nombre-producto">Galaxy Buds Live</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -452,19 +465,21 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$399.920</td>
+                                    <td>$<i class="precio-producto">399.920</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>Auriculares diseñados para sintonizar cada momento. Gracias a su forma icónica y su diseño ergonómico se adaptan de forma natural al entorno; y su altavoz optimizado te permite disfrutar una mejor experiencia. Este sonido está hecho para tus oídos.</p>
+                        <p>Auriculares diseñados para sintonizar cada momento. Gracias a su forma icónica y su diseño
+                            ergonómico se adaptan de forma natural al entorno; y su altavoz optimizado te permite
+                            disfrutar una mejor experiencia. Este sonido está hecho para tus oídos.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -483,13 +498,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/WATCH.jpeg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/WATCH.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Reloj SAMSUNG Galaxy Watch 4 de 40 mm Rosado</td>
+                                    <td class="nombre-producto">Reloj SAMSUNG Galaxy Watch 4 de 40 mm Rosado</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -515,19 +530,21 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$849.900</td>
+                                    <td>$<i class="precio-producto">849.900</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>La clave para ser nuestra mejor versión es seguir conociéndonos cada día. Por eso, hemos diseñado el nuevo Galaxy Watch4 para que, por fin, encuentres el compañero de viaje perfecto para tu yo más saludable.</p>
+                        <p>La clave para ser nuestra mejor versión es seguir conociéndonos cada día. Por eso, hemos
+                            diseñado el nuevo Galaxy Watch4 para que, por fin, encuentres el compañero de viaje perfecto
+                            para tu yo más saludable.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -546,13 +563,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/celu.jpeg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/celu.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Celular SAMSUNG Galaxy S21 FE 256GB 5G Morado + BUDS 2</td>
+                                    <td class="nombre-producto">Celular SAMSUNG Galaxy S21 FE 256GB 5G Morado + BUDS 2</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -578,7 +595,7 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$2.999.090</td>
+                                    <td>$<i class="precio-producto">2.999.090</i></td>
                                 </tr>
                             </table>
                         </div>
@@ -586,13 +603,16 @@
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
                         <p>Galaxy S21 FE viene para sorprender a los fans Galaxy, con todo lo que estaban esperando<br>
-                            Exclusivos, con una pantalla de 6,4” muy resistente y fluida gracias a la protección adicional gorilla glass victus y a su tasa de refresco de 120 Hz.<br>
-                            Este nuevo modelo hereda el rápido procesador incluido en la familia S21 y te va a sorprender con las nuevas funciones de cámara profesional como la grabación dual que te permite tener videos únicos incluyendo la cámara frontal y la gran angular.</p>
+                            Exclusivos, con una pantalla de 6,4” muy resistente y fluida gracias a la protección
+                            adicional gorilla glass victus y a su tasa de refresco de 120 Hz.<br>
+                            Este nuevo modelo hereda el rápido procesador incluido en la familia S21 y te va a
+                            sorprender con las nuevas funciones de cámara profesional como la grabación dual que te
+                            permite tener videos únicos incluyendo la cámara frontal y la gran angular.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -611,13 +631,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/combo.jpg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/combo.jpg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Celular SAMSUNG Galaxy S23Ultra 5G 256Gb Negro + Watch</td>
+                                    <td class="nombre-producto">Celular SAMSUNG Galaxy S23Ultra 5G 256Gb Negro + Watch</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -643,20 +663,25 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$6.999.090</td>
+                                    <td>$<i class="precio-producto">6.999.090</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>El Samsung Galaxy S23 Ultra 5G es un Smartphone con todo lo que necesitas, diseño exclusivo, cámara profesional y un desempeño superior, además cuenta con una herramienta única, el S Pen que te ayudará a llevar tu productividad al mejor nivel.<br> Incluye Galaxy Watch 4 40mm. Llévate el tuyo!<br>
-                            La cámara de Galaxy S23 Ultra 5G es impresionante, gracias a su modulo de cámara de 4 lentes, donde el principal cuenta con 200 MP y tecnología avanzada llamada Nightography que te garantiza las mejores fotos y videos en cualquier hora del día.</p>
+                        <p>El Samsung Galaxy S23 Ultra 5G es un Smartphone con todo lo que necesitas, diseño exclusivo,
+                            cámara profesional y un desempeño superior, además cuenta con una herramienta única, el S
+                            Pen que te ayudará a llevar tu productividad al mejor nivel.<br> Incluye Galaxy Watch 4
+                            40mm. Llévate el tuyo!<br>
+                            La cámara de Galaxy S23 Ultra 5G es impresionante, gracias a su modulo de cámara de 4
+                            lentes, donde el principal cuenta con 200 MP y tecnología avanzada llamada Nightography que
+                            te garantiza las mejores fotos y videos en cualquier hora del día.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -675,13 +700,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/vv.jpeg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/vv.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Celular SAMSUNG Galaxy S22 256GB 5G Negro + Buds2</td>
+                                    <td class="nombre-producto">Celular SAMSUNG Galaxy S22 256GB 5G Negro + Buds2</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -707,20 +732,23 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$3.899.090</td>
+                                    <td>$<i class="precio-producto">3.899.090</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>Galaxy S22 incluye una pantalla brillante de 6,1” Dynamic amoled 2X para que disfrutes de los colores más vivos, la mejor nitidez y todos los detalles sin importar las condiciones de luz de tu ambiente.<br>
-                            Dentro de sus beneficios esta su procesador Qualcomm que se destaca por su rendimiento, velocidad y eficiencia en consumo de batería.</p>
+                        <p>Galaxy S22 incluye una pantalla brillante de 6,1” Dynamic amoled 2X para que disfrutes de los
+                            colores más vivos, la mejor nitidez y todos los detalles sin importar las condiciones de luz
+                            de tu ambiente.<br>
+                            Dentro de sus beneficios esta su procesador Qualcomm que se destaca por su rendimiento,
+                            velocidad y eficiencia en consumo de batería.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -739,13 +767,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/telefono.jpeg" width="100%"alt="">
+                            <img class="img-producto" src="img/produk/telefono.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Celular Samsung Galaxy ZFlip4 256GB 5G GRIS</td>
+                                    <td class="nombre-producto">Celular Samsung Galaxy ZFlip4 256GB 5G GRIS</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -771,26 +799,32 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$4.663.090</td>
+                                    <td>$<i class="precio-producto">4.663.090</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>El Galaxy ZFlip4 Gris un Smartphone poderoso cuando se pliega, nuestro dispositivo plegable más resistente con el vidrio Ultra Thin Glass, su durabilidad avanzada lo hace más fuerte que nunca. El Galaxy ZFlip4 está equipado con la avanzada tecnología de Nightography, que te permite capturar fotos y videos en la noche que se destacan.<br>Demuestra tus habilidades fotográficas con Flex Mode, una experiencia de cámara versátil donde podrás capturar imágenes desde todos los ángulos sin necesidad de un trípode. Descubre todo este y más, ¡Adquiérelo aquí!
+                        <p>El Galaxy ZFlip4 Gris un Smartphone poderoso cuando se pliega, nuestro dispositivo plegable
+                            más resistente con el vidrio Ultra Thin Glass, su durabilidad avanzada lo hace más fuerte
+                            que nunca. El Galaxy ZFlip4 está equipado con la avanzada tecnología de Nightography, que te
+                            permite capturar fotos y videos en la noche que se destacan.<br>Demuestra tus habilidades
+                            fotográficas con Flex Mode, una experiencia de cámara versátil donde podrás capturar
+                            imágenes desde todos los ángulos sin necesidad de un trípode. Descubre todo este y más,
+                            ¡Adquiérelo aquí!
                         </p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="produk9" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -804,13 +838,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/televisor.jpg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/televisor.jpg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>TV SAMSUNG 75" Pulgadas 190,5 cm QN75QN800B 8K NEO QLED MINI LED Smart TV</td>
+                                    <td class="nombre-producto">TV SAMSUNG 75" Pulgadas 190,5 cm QN75QN800B 8K NEO QLED MINI LED Smart TV</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -836,33 +870,38 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$16.999.900</td>
+                                    <td>$<i class="precio-producto">16.999.900</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>Con el TV Neo QLED 8K QN800B de Samsung, disfrutarás la más alta calidad de imagen y sonido como nunca antes has experimentado.<br>
+                        <p>Con el TV Neo QLED 8K QN800B de Samsung, disfrutarás la más alta calidad de imagen y sonido
+                            como nunca antes has experimentado.<br>
 
-                        Su actualizado procesador Neo Quantum escala la imagen a 8K independiente de la fuente de origen y el resultado es una imagen capaz de mostrar detalles en ciertas escenas que antes eran irreconocibles.<br>
-                           
-                           El sonido 3D+ cuenta con 4.2.2 canales integrados que ofrecen un audio diná,mico y realista que te acercan más a la acción de la escena.<br>
-                           
-                            Con su Control Remoto Eco ya no tendrás que preocuparte por las pilas, ya que cuenta con un panel solar.<br>
-                           
-                           No esperes más y compra el TV Samsung más innovador.</p>
+                            Su actualizado procesador Neo Quantum escala la imagen a 8K independiente de la fuente de
+                            origen y el resultado es una imagen capaz de mostrar detalles en ciertas escenas que antes
+                            eran irreconocibles.<br>
+
+                            El sonido 3D+ cuenta con 4.2.2 canales integrados que ofrecen un audio diná,mico y realista
+                            que te acercan más a la acción de la escena.<br>
+
+                            Con su Control Remoto Eco ya no tendrás que preocuparte por las pilas, ya que cuenta con un
+                            panel solar.<br>
+
+                            No esperes más y compra el TV Samsung más innovador.</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="produk10" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -876,13 +915,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/tv.jpg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/tv.jpg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>TV SAMSUNG 85" Pulgadas 215.9 cm QN85QN85BA 4K-UHD NEO QLED MINI LED Smart TV</td>
+                                    <td class="nombre-producto">TV SAMSUNG 85" Pulgadas 215.9 cm QN85QN85BA 4K-UHD NEO QLED MINI LED Smart TV</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -908,25 +947,31 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$13.899.900</td>
+                                    <td>$<i class="precio-producto">13.899.900</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>El TV NEO QLED QN85B de SAMSUNG, te lleva a vivir la experiencia 4K más avanzada gracias a su procesador Quantum, el cual escala la imagen independiente de la fuente de origen para que disfrutes mayor brillo y contraste en cada escena. Adicional, cuenta con la tecnología Dolby Atmos, la cual te permitirá tener una increíble experiencia de sonido envolvente y multidireccional. Tambien podrás ver tú Tv y tu smartphone en la misma pantalla para disfrutar de la experiencia multipantalla. Y con su Control Remoto Eco ya no tendrás que preocuparte por las pilas. ¡Compra el tuyo!</p>
+                        <p>El TV NEO QLED QN85B de SAMSUNG, te lleva a vivir la experiencia 4K más avanzada gracias a su
+                            procesador Quantum, el cual escala la imagen independiente de la fuente de origen para que
+                            disfrutes mayor brillo y contraste en cada escena. Adicional, cuenta con la tecnología Dolby
+                            Atmos, la cual te permitirá tener una increíble experiencia de sonido envolvente y
+                            multidireccional. Tambien podrás ver tú Tv y tu smartphone en la misma pantalla para
+                            disfrutar de la experiencia multipantalla. Y con su Control Remoto Eco ya no tendrás que
+                            preocuparte por las pilas. ¡Compra el tuyo!</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="produk11" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -940,13 +985,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/parlante.jpeg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/parlante.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Minicomponente SAMSUNG MX-T70 1500 Watts Negro Torre de Sonido</td>
+                                    <td class="nombre-producto">Minicomponente SAMSUNG MX-T70 1500 Watts Negro Torre de Sonido</td>
                                 </tr>
                                 <tr>
                                     <th>Tipo</th>
@@ -972,25 +1017,31 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$1.199.900</td>
+                                    <td>$<i class="precio-producto">1.199.900</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>Aumenta el volumen de tu fiesta con el exclusivo SAMSUNG Giga Party Audio MX-T70.| Expande los beats con este equipo y disfruta de una potente experiencia de sonido envolvente. Haz vibrar las paredes con su sonido bidireccional y su woofer que intensifica los bajos. Adicionalmente, puedes convertirte en toda una estrella gracias al modo karaoke, o convertirte en un DJ gracias a nuestra App exclusiva que facilita su control y conecta varios dispositivos con o sin cables. ¡Adquiere el tuyo ahora y deja que empiece la fiesta!</p>
+                        <p>Aumenta el volumen de tu fiesta con el exclusivo SAMSUNG Giga Party Audio MX-T70.| Expande
+                            los beats con este equipo y disfruta de una potente experiencia de sonido envolvente. Haz
+                            vibrar las paredes con su sonido bidireccional y su woofer que intensifica los bajos.
+                            Adicionalmente, puedes convertirte en toda una estrella gracias al modo karaoke, o
+                            convertirte en un DJ gracias a nuestra App exclusiva que facilita su control y conecta
+                            varios dispositivos con o sin cables. ¡Adquiere el tuyo ahora y deja que empiece la fiesta!
+                        </p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="produk12" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -1004,13 +1055,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="img/produk/mini.jpeg" width="100%" alt="">
+                            <img class="img-producto" src="img/produk/mini.jpeg" width="100%" alt="">
                         </div>
                         <div class="col-md-6">
                             <table class="table table-borderless">
                                 <tr>
                                     <th>Nombre del Producto</th>
-                                    <td>Minicomponente SAMSUNG MX-T40 300 Watts Negro Torre de Sonido</td>
+                                    <td class="nombre-producto">Minicomponente SAMSUNG MX-T40 300 Watts Negro Torre de Sonido</td>
                                 </tr>
                                 <tr>
                                     <th>Marca/Tipo</th>
@@ -1036,19 +1087,23 @@
                                 </tr>
                                 <tr>
                                     <th>Precio</th>
-                                    <td>$399.900</td>
+                                    <td>$<i class="precio-producto">399.900</i></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                     <div class="mr-4 ml-4">
                         <H4>Resumen del producto</H4>
-                        <p>La exclusiva Torre de Sonido Samsung MX-T40 tiene una potencia de salida de 300 vatios para que disfrutes de una experiencia de sonido bidireccional envolvente, adicional, cuenta con un panel de control que ofrece una resistencia a salpicaduras y con la aplicación Samsung Giga Party Audio podrás controlar las luces, crear listas de canciones, hacer mezclas con el ecualizador y colocar efectos tipo DJ  ¡Que comience la fiesta!</p>
+                        <p>La exclusiva Torre de Sonido Samsung MX-T40 tiene una potencia de salida de 300 vatios para
+                            que disfrutes de una experiencia de sonido bidireccional envolvente, adicional, cuenta con
+                            un panel de control que ofrece una resistencia a salpicaduras y con la aplicación Samsung
+                            Giga Party Audio podrás controlar las luces, crear listas de canciones, hacer mezclas con el
+                            ecualizador y colocar efectos tipo DJ ¡Que comience la fiesta!</p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">VOLVER</button>
-                    <button type="button" class="btn btn-primary">COMPRAR</button>
+                    <button type="button" class="btn btn-primary buy-button">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -1068,16 +1123,20 @@
             </div>
             <div class="col-md-3">
                 <h5>Sobre nosotros</h5>
-                <p> Samsung es denominado el rey de la industria electrónica desde hace muchos años y ha logrado mantenerse en el mercado, por lo cual brindar estrategias que se acojan al desarrollo de la misma no es una tarea fácil, sin embargo dentro del E-commerce que manejan si se puede brindar algunas alternativas que puedan potenciar el desarrollo de la misma</p>
+                <p> Samsung es denominado el rey de la industria electrónica desde hace muchos
+                    años y ha logrado mantenerse en el mercado, por lo cual brindar
+                    estrategias que se acojan aldesarrollo de la misma no es una tarea fácil,
+                    sin embargo dentro del E-commerce quemanejan si se puede brindar algunas
+                    alternativas que puedan potenciar el desarrollo de la misma</p>
             </div>
             <div class="col-md-3">
-                <h5>Metodos de pago</h5>
+                <h5>Aliados</h5>
                 <ul>
-                    <li>Tarjeta débito</li>
-                    <li>Tarjeta Crédito</li>
-                    <li>(VISA, MASTERCARD, AMERICAN EXPRESS)</li>
-                    <li>PSE</li>
-                    <li>Diners Club Internacional</li>
+                    <li>UBER</li>
+                    <li>JNE</li>
+                    <li>DESPEGAR</li>
+                    <li>INTER RAPIDISIMO</li>
+                    <li>RAPPI</li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -1107,7 +1166,6 @@
     <script type="text/javascript" src="script.js"></script>
 </body>
 
-</body>
 
 <script>
     function buscar() {
